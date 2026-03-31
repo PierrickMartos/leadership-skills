@@ -16,6 +16,12 @@ Then install individual plugins:
 /plugin install <plugin-name>@leadership-skills
 ```
 
+## Plugins
+
+| Plugin | Description | Install |
+|--------|-------------|---------|
+| `decision-adversarial-review` | Adversarial review for significant strategic decisions — stress-tests choices like hires, launches, and strategy shifts by surfacing blind spots and unstated assumptions. | `/plugin install decision-adversarial-review@leadership-skills` |
+
 ## Usage
 
 Once a plugin is installed, invoke its skills directly in Claude Code:
