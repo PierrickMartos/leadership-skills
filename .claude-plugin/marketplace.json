@@ -1,0 +1,10 @@
+{
+  "name": "leadership-skills",
+  "owner": {
+    "name": "Pierrick Martos"
+  },
+  "metadata": {
+    "description": "Leadership skills, agents, commands, and hooks for Claude Code"
+  },
+  "plugins": []
+}
