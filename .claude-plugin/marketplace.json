@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "leadership-skills",
+  "version": "0.1.0",
+  "description": "Leadership skills and agents for Claude Code",
+  "owner": {
+    "name": "Pierrick Martos",
+    "url": "https://github.com/PierrickMartos"
+  },
+  "plugins": [
+    {
+      "name": "decision-making",
+      "source": "./decision-making",
+      "description": "Decision-making skills for leaders — stress-testing strategic choices, surfacing blind spots, and structuring high-stakes decisions."
+    },
+    {
+      "name": "communication",
+      "source": "./communication",
+      "description": "Communication skills for leaders — navigating difficult conversations, delivering feedback, and resolving conflict."
+    }
+  ]
+}

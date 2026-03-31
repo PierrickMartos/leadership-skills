@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(make version)",
+      "Bash(make patch)",
+      "Bash(make minor)",
+      "Bash(make major)",
+      "Bash(make release)"
+    ],
+    "deny": [
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/secrets.*)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Read(**/*.p12)",
+      "Read(**/*.pfx)",
+      "Write(**/.env)",
+      "Write(**/.env.*)",
+      "Write(**/secrets.*)",
+      "Bash(cat **/.env*)",
+      "Bash(cat **/secrets*)"
+    ]
+  }
+}
