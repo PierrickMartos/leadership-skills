@@ -20,7 +20,7 @@ jobs:
       - name: Validate marketplace
         uses: anthropics/claude-code-action@beta
         with:
-          direct_prompt: |
+          prompt: |
             /validate-marketplace
             If any issues were found, use the Bash tool to run `exit 1` so the CI check fails.
             If everything is valid, do nothing extra.
