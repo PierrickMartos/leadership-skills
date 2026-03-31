@@ -35,10 +35,22 @@ All plugins will be available to install from the marketplace panel.
 
 ## Plugins
 
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| `decision-making` | Skills for stress-testing the decisions that matter — before you commit. Surfaces blind spots, challenges unstated assumptions, and asks the questions you haven't thought to ask yet. | `/plugin install decision-making@leadership-skills` |
-| `communication` | Skills for communicating clearly and having the conversations that matter — structuring written messages for impact and navigating difficult face-to-face conversations with directness and care. | `/plugin install communication@leadership-skills` |
+### `decision-making` — `/plugin install decision-making@leadership-skills`
+
+Skills for stress-testing the decisions that matter — before you commit. Surfaces blind spots, challenges unstated assumptions, and asks the questions you haven't thought to ask yet.
+
+| Skill | Purpose |
+|-------|---------|
+| `adversarial-review` | Stress-test a strategic choice by attacking it from every angle — assumptions, alternatives, risks, and second-order effects. |
+
+### `communication` — `/plugin install communication@leadership-skills`
+
+Skills for communicating clearly and having the conversations that matter — structuring written messages for impact and navigating difficult face-to-face conversations with directness and care.
+
+| Skill | Purpose |
+|-------|---------|
+| `bluf-communication` | Rewrite a draft message using BLUF (Bottom Line Up Front) — lead with the conclusion, cut the build-up. |
+| `difficult-conversations` | Prepare for a high-stakes conversation — feedback, underperformance, conflict — with structure, clarity, and care. |
 
 ## Usage
 
