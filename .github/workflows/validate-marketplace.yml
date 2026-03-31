@@ -12,7 +12,6 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -25,4 +24,5 @@ jobs:
             If any issues were found, use the Bash tool to run `exit 1` so the CI check fails.
             If everything is valid, do nothing extra.
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           allowed_tools: "Bash,Read,Glob,Grep"
