@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "leadership-skills",
-  "version": "0.3.0",
-  "description": "Leadership skills and agents for Claude Code",
+  "version": "0.3.1",
+  "description": "11 leadership skills for Claude Code",
   "license": "MIT",
   "owner": {
     "name": "Pierrick Martos",
@@ -12,21 +12,25 @@
     {
       "name": "decision-making",
       "source": "./decision-making",
+      "category": "leadership",
       "description": "Decision-making skills for leaders \u2014 stress-testing strategic choices, surfacing blind spots, and structuring high-stakes decisions."
     },
     {
       "name": "communication",
       "source": "./communication",
+      "category": "leadership",
       "description": "Communication skills for leaders \u2014 navigating difficult conversations, delivering feedback, and resolving conflict."
     },
     {
       "name": "hiring",
       "source": "./hiring",
+      "category": "leadership",
       "description": "Hiring skills for leaders \u2014 screening candidates, structuring interviews, and making evidence-based hiring decisions."
     },
     {
       "name": "performance-management",
       "source": "./performance-management",
+      "category": "leadership",
       "description": "Performance management skills for leaders \u2014 writing fact-based reviews, preparing for calibration, assessing career growth, and helping ICs write compelling self-reviews."
     }
   ]
