@@ -5,7 +5,7 @@
 
 11 leadership skills for Claude Code, Cursor, and Claude Cowork.
 
-**For engineering directors, managers, tech leads, and ICs** who want structured help with the hard parts of leadership — decisions, communication, hiring, and performance management.
+**For directors, managers, leads, and ICs** who want structured help with the hard parts of leadership — decisions, communication, hiring, and performance management.
 
 ![Skills](assets/Skills.png)
 
