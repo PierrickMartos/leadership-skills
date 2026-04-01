@@ -172,6 +172,8 @@ Claude Code: `/plugin install performance-management@leadership-skills`
 
 ## Thank You
 
+This repo was inspired by [phuryn/pm-skills](https://github.com/phuryn/pm-skills), which showed how to structure skills marketplace for product managers. It gave me the idea to build something similar for leaders.
+
 Thanks to the following contributors for their input and support:
 
 - [@ChuckJHardy](https://github.com/ChuckJHardy)
