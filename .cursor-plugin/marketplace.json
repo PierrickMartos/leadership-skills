@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Leadership skills and agents for Cursor",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "pluginRoot": "."
   },
   "plugins": [
