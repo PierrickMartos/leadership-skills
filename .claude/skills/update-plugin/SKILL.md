@@ -56,11 +56,16 @@ Read each file. Increment the patch version (e.g. `1.0.0` → `1.0.1`) to the sa
 
 **5. Update top-level `README.md`**
 
-Read `.claude-plugin/marketplace.json` and  `.cursor-plugin/marketplace.json` to confirm the plugin is listed. Then read the top-level `README.md`.
+Read `.claude-plugin/marketplace.json` and `.cursor-plugin/marketplace.json` to confirm the plugin is listed. Then read the top-level `README.md`.
 
-If the plugin's intro description (from step 3) changed, update the matching row in the `## Plugins` table to reflect the new description. Keep the install command unchanged.
+Find the plugin's `<details>` dropdown in the `## Plugins` section. Update:
+- The **skill count** in the `<summary>` line — count all `skills/*/SKILL.md` files in the plugin directory. Use "1 skill" (singular) when count is 1, "N skills" (plural) otherwise.
+- The **description** in the `<summary>` line if the plugin's intro description (from step 3) changed.
+- Add the new skill row to the table inside the `<details>` block.
 
-Write the updated `README.md` only if the description actually changed.
+Also update the **total skill count** in the subtitle line (e.g. `11 leadership skills for Claude Code, Cursor, and Claude Cowork.`). Count all `skills/*/SKILL.md` files across all plugin directories to get the new total.
+
+Write the updated `README.md`.
 
 **6. Confirm**
 

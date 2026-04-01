@@ -16,16 +16,24 @@ Steps:
 6. Write the updated `.claude-plugin/marketplace.json`
 6b. Read `.cursor-plugin/marketplace.json`. Add the same entry to its `plugins` array. Write the updated `.cursor-plugin/marketplace.json`
 7. Read `README.md`
-8. Update the README to include a "## Plugins" section (or update the existing one) listing all plugins currently in `marketplace.json`. For each plugin, render a table row or bullet with its name, description, and install command. Place the section after the "## Install" section and before "## Usage". Use this format:
+8. Update the README `## Plugins` section (or create it after `## Install` and before `## Usage`). Each plugin is rendered as a `<details>` dropdown. Count the number of `skills/*/SKILL.md` files in the plugin directory to determine the skill count. Use this format:
 
 ```markdown
-## Plugins
+<details>
+<summary><strong><code>plugin-name</code></strong> (N skills) — Short plugin description.</summary>
 
-| Plugin | Description | Install |
-|--------|-------------|---------|
-| `plugin-name` | Plugin description | `/plugin install plugin-name@leadership-skills` |
+Claude Code: `/plugin install plugin-name@leadership-skills`
+
+| Skill | Purpose |
+|-------|---------|
+| `skill-name` | Skill description. |
+
+</details>
 ```
 
-9. Write the updated README.md
+Use "1 skill" (singular) when count is 1, "N skills" (plural) otherwise. If the plugin has no skills yet, use "(0 skills)".
+
+9. Update the **total skill count** in the subtitle line (e.g. `11 leadership skills for Claude Code, Cursor, and Claude Cowork.`). Count all `skills/*/SKILL.md` files across all plugin directories to get the new total.
+10. Write the updated README.md
 
 If $ARGUMENTS is provided, treat it as the plugin name or GitHub repo to add.

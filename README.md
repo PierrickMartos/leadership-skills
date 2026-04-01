@@ -1,16 +1,36 @@
-# Leadership Skills
+# Leadership Skills Marketplace
 
-Leadership skills and agents marketplace for Claude Code and Claude Cowork.
+11 leadership skills for Claude Code, Cursor, and Claude Cowork.
+
+**For engineering directors, managers, tech leads, and ICs** who want structured help with the hard parts of leadership — decisions, communication, hiring, and performance management.
+
+![Skills](assets/Skills.png)
 
 ## Philosophy
 
-These skills and agents are designed to **identify gaps** in your initial thinking — in decisions, plans, and processes.
+These skills are designed to **identify gaps** in your initial thinking — in decisions, plans, and processes.
 
 Use them as a tool to challenge yourself: surface blind spots, stress-test assumptions, and ask the uncomfortable questions before reality does.
 
+## Quick Start
+
+```shell
+# 1. Add the marketplace
+/plugin marketplace add pierrickmartos/leadership-skills
+
+# 2. Install a plugin
+/plugin install communication@leadership-skills
+
+# 3. Use a skill
+/communication:difficult-conversations
+```
+
+That's it. Browse all plugins below, or jump to [Usage](#usage) for more examples.
+
 ## Install
 
-### Claude Code
+<details>
+<summary><strong>Claude Code</strong></summary>
 
 Add this marketplace:
 
@@ -24,7 +44,10 @@ Then install individual plugins:
 /plugin install <plugin-name>@leadership-skills
 ```
 
-### Cursor
+</details>
+
+<details>
+<summary><strong>Cursor</strong></summary>
 
 Add this marketplace:
 
@@ -34,7 +57,10 @@ Ctrl+Shift+P → Cursor: Add Plugin Marketplace → pierrickmartos/leadership-sk
 
 Then install individual plugins from the Cursor marketplace panel.
 
-### Claude Cowork
+</details>
+
+<details>
+<summary><strong>Claude Cowork</strong></summary>
 
 1. Open **Customize** (bottom-left corner)
 2. Go to **Browse plugins** → **Personal** → **+**
@@ -43,50 +69,9 @@ Then install individual plugins from the Cursor marketplace panel.
 
 All plugins will be available to install from the marketplace panel.
 
-## Plugins
-
-### `decision-making` — `/plugin install decision-making@leadership-skills`
-
-Skills for stress-testing the decisions that matter — before you commit. Surfaces blind spots, challenges unstated assumptions, and asks the questions you haven't thought to ask yet.
-
-| Skill | Purpose |
-|-------|---------|
-| `adversarial-review` | Stress-test a strategic choice by attacking it from every angle — assumptions, alternatives, risks, and second-order effects. |
-| `decision-memo` | Structure a strategic decision into a clear, shareable memo — context, options, tradeoffs, recommendation, and risk. |
-
-### `communication` — `/plugin install communication@leadership-skills`
-
-Skills for communicating clearly and having the conversations that matter — structuring written messages for impact, escalating problems without creating drama, and navigating difficult face-to-face conversations with directness and care.
-
-| Skill | Purpose |
-|-------|---------|
-| `bluf-communication` | Rewrite a draft message using BLUF (Bottom Line Up Front) — lead with the conclusion, cut the build-up. |
-| `difficult-conversations` | Prepare for a high-stakes conversation — feedback, underperformance, conflict — with structure, clarity, and care. |
-| `escalate-without-drama` | Escalate a blocker, ownership gap, or stalled dependency firmly and professionally — without blame or politics. |
-| `reframe-for-execs` | Compress and reframe a detailed draft into a crisp executive-ready message — for VPs, steering committees, or the C-suite. |
-
-### `hiring` — `/plugin install hiring@leadership-skills`
-
-Skills for making better hiring decisions — structuring interviews, screening candidates, and building evidence-based evaluation processes.
-
-| Skill | Purpose |
-|-------|---------|
-| `screen-candidate-for-hm-call` | Screen a candidate before a hiring manager call — structured evaluation of fit, risks, and talking points. |
-
-### `performance-management` — `/plugin install performance-management@leadership-skills`
-
-Performance management skills for leaders — writing fact-based reviews, preparing for calibration, assessing career growth, and helping ICs write compelling self-reviews. Grounded in best practices with embedded bias checks.
-
-| Skill | Purpose |
-|-------|---------|
-| `write-performance-review` | Write a comprehensive, evidence-based performance review — strengths-first, anchored on goals, with bias checks. |
-| `write-self-review` | Help an IC write a compelling self-review that prepares them for a two-way performance conversation. |
-| `assess-career-growth` | Map demonstrated behaviors against a career/competency framework to identify strengths, gaps, and development priorities. |
-| `calibrate-talent` | Prepare calibration ratings (performance × potential) with evidence-backed notes and talking points for a calibration meeting. |
+</details>
 
 ## Usage
-
-### Claude Code
 
 Invoke skills directly:
 
@@ -114,16 +99,73 @@ defensive in code reviews. The team is frustrated. I've avoided the conversation
 ```
 
 ```
-/communication:bluf-communication
+/performance-management:write-performance-review
 
-Hi team, I wanted to share some thoughts on the Q2 roadmap. As you know, we've
-been discussing priorities across several planning sessions and after aligning
-with stakeholders I think it's important that we... [long draft]
+I need to write the year-end review for Sarah, a Senior Engineer on my team.
+I have her self-review, our 1:1 notes, and peer feedback from 3 teammates.
 ```
 
-### Claude Cowork
+```
+/hiring:screen-candidate-for-hm-call
 
-Skills activate automatically when relevant, or invoke them manually by typing `/` or clicking **+** during a Cowork session.
+I have a resume and LinkedIn profile for a senior backend engineer.
+Here's the job description and what we're looking for on the team.
+```
+
+In **Claude Cowork**, skills activate automatically when relevant, or invoke them manually by typing `/` or clicking **+** during a session.
+
+## Plugins
+
+<details>
+<summary><strong><code>decision-making</code></strong> (2 skills) — Skills for stress-testing the decisions that matter.</summary>
+
+Claude Code: `/plugin install decision-making@leadership-skills`
+
+| Skill | Purpose |
+|-------|---------|
+| `adversarial-review` | Stress-test a strategic choice by attacking it from every angle — assumptions, alternatives, risks, and second-order effects. |
+| `decision-memo` | Structure a strategic decision into a clear, shareable memo — context, options, tradeoffs, recommendation, and risk. |
+
+</details>
+
+<details>
+<summary><strong><code>communication</code></strong> (4 skills) — Skills for communicating clearly and having the conversations that matter.</summary>
+
+Claude Code: `/plugin install communication@leadership-skills`
+
+| Skill | Purpose |
+|-------|---------|
+| `bluf-communication` | Rewrite a draft message using BLUF (Bottom Line Up Front) — lead with the conclusion, cut the build-up. |
+| `difficult-conversations` | Prepare for a high-stakes conversation — feedback, underperformance, conflict — with structure, clarity, and care. |
+| `escalate-without-drama` | Escalate a blocker, ownership gap, or stalled dependency firmly and professionally — without blame or politics. |
+| `reframe-for-execs` | Compress and reframe a detailed draft into a crisp executive-ready message — for VPs, steering committees, or the C-suite. |
+
+</details>
+
+<details>
+<summary><strong><code>hiring</code></strong> (1 skill) — Skills for making better hiring decisions.</summary>
+
+Claude Code: `/plugin install hiring@leadership-skills`
+
+| Skill | Purpose |
+|-------|---------|
+| `screen-candidate-for-hm-call` | Screen a candidate before a hiring manager call — structured evaluation of fit, risks, and talking points. |
+
+</details>
+
+<details>
+<summary><strong><code>performance-management</code></strong> (4 skills) — Skills for writing reviews, calibration, and career growth.</summary>
+
+Claude Code: `/plugin install performance-management@leadership-skills`
+
+| Skill | Purpose |
+|-------|---------|
+| `write-performance-review` | Write a comprehensive, evidence-based performance review — strengths-first, anchored on goals, with bias checks. |
+| `write-self-review` | Help an IC write a compelling self-review that prepares them for a two-way performance conversation. |
+| `assess-career-growth` | Map demonstrated behaviors against a career/competency framework to identify strengths, gaps, and development priorities. |
+| `calibrate-talent` | Prepare calibration ratings (performance × potential) with evidence-backed notes and talking points for a calibration meeting. |
+
+</details>
 
 ## Thank You
 
