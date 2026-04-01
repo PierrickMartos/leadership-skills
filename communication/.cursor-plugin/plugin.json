@@ -1,0 +1,12 @@
+{
+  "name": "communication",
+  "displayName": "Communication",
+  "version": "0.1.1",
+  "description": "Communication skills for leaders — navigating difficult conversations, delivering feedback, and resolving conflict.",
+  "author": {
+    "name": "Pierrick Martos",
+    "url": "https://github.com/PierrickMartos"
+  },
+  "license": "MIT",
+  "keywords": ["leadership", "communication", "feedback"]
+}

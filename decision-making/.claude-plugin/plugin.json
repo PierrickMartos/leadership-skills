@@ -1,7 +1,9 @@
 {
   "name": "decision-making",
   "description": "Decision-making skills for leaders — stress-testing strategic choices, surfacing blind spots, and structuring high-stakes decisions.",
-  "version": "0.1.0",
+  "version": "0.1.2",
+  "keywords": ["decision-making", "leadership", "strategy", "blind-spots", "strategic-thinking"],
+  "license": "MIT",
   "author": {
     "name": "Pierrick Martos",
     "url": "https://github.com/PierrickMartos"

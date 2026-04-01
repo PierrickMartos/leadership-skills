@@ -25,6 +25,49 @@ communicate its point in as few words as possible. If you're writing paragraphs,
 
 ## Step 1: Gather context
 
+### Step 1a: Ask where to get content
+
+Before diving into the decision itself, use `AskUserQuestion` to ask the user where relevant
+context and supporting material can be found:
+
+- **Local filesystem** — You will create a temporary folder (e.g. `/tmp/adversarial-review-<short-id>/`)
+  and tell the user its path so they can drop files there (docs, slides, data exports, notes).
+  Once the user confirms the files are ready, read everything in that folder as additional context.
+- **Online resources** — The user provides one or more public URLs (articles, reports, dashboards,
+  docs). Fetch and use them as context.
+- **MCP(s)** — The user points you to connected MCP tools (e.g. Notion, Google Drive, Slack) to
+  pull relevant context from.
+- **Something else** — Let the user describe their own method.
+
+Use these parameters for the question:
+
+```
+question: "Where should I get the context and supporting material for this review?"
+header: "Content source"
+options:
+  - label: "Local filesystem"
+    description: "I'll create a tmp folder where you can drop files (docs, slides, data). You tell me when they're ready."
+  - label: "Online resources"
+    description: "You provide public link(s) — articles, reports, documents — and I'll fetch them."
+  - label: "MCP(s)"
+    description: "Pull context from connected tools (Notion, Google Drive, Slack, etc.)."
+  - label: "Something else"
+    description: "You'll describe how to get the context."
+multiSelect: true
+```
+
+**After the user answers:**
+
+- **Local filesystem:** Create the tmp folder, tell the user its exact path, and wait for them to
+  confirm files are in place before continuing. Then read all files in the folder.
+- **Online resources:** Ask for the URL(s), fetch them, and use the content as context.
+- **MCP(s):** Ask which MCP tool(s) to use and what to look for, then pull the relevant content.
+- **Something else:** Follow the user's instructions.
+
+Proceed to Step 1b once you have the supporting material (or the user says there is none).
+
+### Step 1b: Understand the decision
+
 Ask the user:
 
 1. **What is the decision?** What are the options on the table?

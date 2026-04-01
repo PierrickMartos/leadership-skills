@@ -7,7 +7,37 @@ Contributions are welcome! Feel free to open a pull request if you'd like to sug
 
 ## Working with Claude Code skills
 
-This repo ships Claude Code skills that automate common workflows. After cloning, run once to symlink all skills for local testing:
+This repo ships Claude Code skills that automate common workflows.
+
+### Testing plugins locally
+
+#### Using `--plugin-dir` (recommended)
+
+Use the `--plugin-dir` flag to load plugins directly during development without requiring installation:
+
+```bash
+claude --plugin-dir ./communication
+```
+
+You can load multiple plugins at once:
+
+```bash
+claude --plugin-dir ./communication --plugin-dir ./decision-making
+```
+
+As you make changes, run `/reload-plugins` inside Claude Code to pick up updates without restarting. Then test your plugin components:
+
+- Try your skills with `/plugin-name:skill-name`
+- Check that agents appear in `/agents`
+- Verify hooks work as expected
+
+When a `--plugin-dir` plugin has the same name as an installed marketplace plugin, the local copy takes precedence for that session.
+
+> See the [official documentation](https://code.claude.com/docs/en/plugins#test-your-plugins-locally) for more details.
+
+#### Using `/link-for-testing`
+
+Alternatively, run once after cloning to symlink all skills for local testing:
 
 ```
 /link-for-testing
@@ -21,7 +51,7 @@ Use the `/add-plugin` skill to register a new plugin in the marketplace catalog 
 /add-plugin <plugin-name>
 ```
 
-This updates `.claude-plugin/marketplace.json` and the `## Plugins` table in `README.md`.
+This updates `.claude-plugin/marketplace.json`, `.cursor-plugin/marketplace.json` and the `## Plugins` table in `README.md`.
 
 ### Adding a skill or agent to an existing plugin
 

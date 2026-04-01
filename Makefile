@@ -1,7 +1,8 @@
-MARKETPLACE_JSON := .claude-plugin/marketplace.json
-CURRENT_VERSION := $(shell python3 -c "import json; d=json.load(open('$(MARKETPLACE_JSON)')); print(d['version'])")
+CLAUDE_MARKETPLACE := .claude-plugin/marketplace.json
+CURSOR_MARKETPLACE := .cursor-plugin/marketplace.json
+CURRENT_VERSION := $(shell python3 -c "import json; print(json.load(open('$(CLAUDE_MARKETPLACE)'))['version'])")
 
-.PHONY: version release patch minor major
+.PHONY: version patch minor major release
 
 version:
 	@echo "Current version: $(CURRENT_VERSION)"
@@ -15,27 +16,33 @@ minor:
 major:
 	@$(MAKE) _bump PART=major
 
+define bump_version
+$(shell python3 -c "\
+v = '$(1)'.split('.'); \
+i = {'major': 0, 'minor': 1, 'patch': 2}['$(2)']; \
+v[i] = str(int(v[i]) + 1); \
+v[i+1:] = ['0'] * (2 - i); \
+print('.'.join(v))")
+endef
+
+define set_json_version
+python3 -c "\
+import json, pathlib; \
+p = pathlib.Path('$(1)'); \
+d = json.loads(p.read_text()); \
+$(2) = '$(3)'; \
+p.write_text(json.dumps(d, indent=2) + '\n')"
+endef
+
 _bump:
-	$(eval NEW_VERSION := $(shell python3 -c " \
-		v = '$(CURRENT_VERSION)'.split('.'); \
-		parts = {'major': 0, 'minor': 1, 'patch': 2}; \
-		i = parts['$(PART)']; \
-		v[i] = str(int(v[i]) + 1); \
-		[v.__setitem__(j, '0') for j in range(i+1, 3)]; \
-		print('.'.join(v)) \
-	"))
-	@python3 -c " \
-		import json; \
-		d = json.load(open('$(MARKETPLACE_JSON)')); \
-		d['version'] = '$(NEW_VERSION)'; \
-		json.dump(d, open('$(MARKETPLACE_JSON)', 'w'), indent=2); \
-		open('$(MARKETPLACE_JSON)', 'a').write('\n') \
-	"
-	@echo "Bumped $(CURRENT_VERSION) → $(NEW_VERSION)"
-	git add $(MARKETPLACE_JSON)
-	git commit -m "chore: bump version to $(NEW_VERSION)"
-	git tag "v$(NEW_VERSION)"
-	@echo "Run 'make release' to push and publish v$(NEW_VERSION)"
+	$(eval NEW := $(call bump_version,$(CURRENT_VERSION),$(PART)))
+	@$(call set_json_version,$(CLAUDE_MARKETPLACE),d['version'],$(NEW))
+	@$(call set_json_version,$(CURSOR_MARKETPLACE),d['metadata']['version'],$(NEW))
+	@echo "Bumped $(CURRENT_VERSION) → $(NEW)"
+	git add $(CLAUDE_MARKETPLACE) $(CURSOR_MARKETPLACE)
+	git commit -m "chore: bump version to $(NEW)"
+	git tag "v$(NEW)"
+	@echo "Run 'make release' to push and publish v$(NEW)"
 
 release:
 	git push

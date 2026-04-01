@@ -1,0 +1,12 @@
+{
+  "name": "hiring",
+  "displayName": "Hiring",
+  "version": "0.1.0",
+  "description": "Hiring skills for leaders — screening candidates, structuring interviews, and making evidence-based hiring decisions.",
+  "author": {
+    "name": "Pierrick Martos",
+    "url": "https://github.com/PierrickMartos"
+  },
+  "license": "MIT",
+  "keywords": ["leadership", "hiring", "interviews", "screening", "recruitment"]
+}

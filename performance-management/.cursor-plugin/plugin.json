@@ -1,0 +1,12 @@
+{
+  "name": "performance-management",
+  "displayName": "Performance Management",
+  "description": "Performance management skills for leaders — writing fact-based reviews, preparing for calibration, assessing career growth, and helping ICs write compelling self-reviews.",
+  "version": "0.1.0",
+  "keywords": ["performance", "leadership", "reviews", "calibration", "career-growth", "self-review", "bias"],
+  "license": "MIT",
+  "author": {
+    "name": "Pierrick Martos",
+    "url": "https://github.com/PierrickMartos"
+  }
+}

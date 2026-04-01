@@ -50,13 +50,13 @@ For agents — update or create an `## Agents` section:
 
 Keep rows sorted alphabetically by name within each table.
 
-**4. Bump patch version in `<plugin>/.claude-plugin/plugin.json`**
+**4. Bump patch version in `<plugin>/.claude-plugin/plugin.json` and `<plugin>/.cursor-plugin/plugin.json`**
 
-Read the file. Increment the patch version (e.g. `1.0.0` → `1.0.1`). Write the updated file.
+Read each file. Increment the patch version (e.g. `1.0.0` → `1.0.1`) to the same new value in both. Write both updated files.
 
 **5. Update top-level `README.md`**
 
-Read `.claude-plugin/marketplace.json` to confirm the plugin is listed. Then read the top-level `README.md`.
+Read `.claude-plugin/marketplace.json` and  `.cursor-plugin/marketplace.json` to confirm the plugin is listed. Then read the top-level `README.md`.
 
 If the plugin's intro description (from step 3) changed, update the matching row in the `## Plugins` table to reflect the new description. Keep the install command unchanged.
 

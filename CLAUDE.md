@@ -12,7 +12,9 @@ This repo is a Claude Code **marketplace** (not a plugin itself). It catalogs le
 
 ```
 .claude-plugin/
-└── marketplace.json    # Marketplace catalog (name, owner, plugins list)
+└── marketplace.json    # Marketplace catalog for Claude (name, owner, plugins list)
+.cursor-plugin/
+└── marketplace.json    # Marketplace catalog for Cursor (name, owner, plugins list)
 .mcp.json               # MCP server definitions
 <plugin-name>/          # One folder per domain plugin (e.g. decision-making, communication)
 ├── .claude-plugin/
