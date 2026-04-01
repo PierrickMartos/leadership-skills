@@ -131,6 +131,7 @@ Thanks to the following contributors for their input and support:
 
 - [@ChuckJHardy](https://github.com/ChuckJHardy)
 - [@pchasle](https://github.com/pchasle)
+- [@SamirBoulil](https://github.com/SamirBoulil)
 
 ## Contributing
 
